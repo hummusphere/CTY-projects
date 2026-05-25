@@ -1,0 +1,68 @@
+.background {
+    background-color:rgb(241, 241, 241);
+}
+
+a {
+    color:rgb(0, 0, 255); 
+    text-decoration:none;
+}
+
+.nav {
+    font-size:2em; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color:rgb(156, 114, 28);
+    padding-right: 30px;
+}
+
+.font{
+    font-family:Arial, Helvetica, sans-serif; 
+    color:rgb(156, 114, 28)
+}
+
+header {
+    background-color:rgb(253, 227, 197);
+    padding:20px;
+}
+
+body {
+    background-color:rgb(255, 245, 225);
+}
+
+#border {
+    border: 5px solid rgb(156, 114, 28);
+    border-radius:20px;
+}
+/*navagation bar button*/
+.button {
+    padding-right:10px;
+    padding-left:10px;
+    margin-left:10px;
+    border: 1px solid rgb(255, 245, 225);
+    border-radius:10px;
+    background-color:rgb(255, 245, 225);
+}
+
+ul {
+	list-style-type: square;
+}
+
+.buttontwo {
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid rgb(253, 227, 197);
+    border-radius:20px;
+    background-color:rgb(253, 227, 197);
+    text-decoration:none;
+    color:rgb(156, 114, 28)
+}
+
+img {
+    float:left;
+}
+
+table {
+    border: 5px solid rgb(156, 114, 28);
+    border-radius:10px;
+    padding:10px;
+}
