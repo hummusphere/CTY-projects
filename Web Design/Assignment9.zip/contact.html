@@ -1,0 +1,75 @@
+<!---Contact Us Page --->
+<html>
+    <head> 
+        <!--Website Title-->
+        <title> VisualBooks - Contact Us </title>
+        <style>
+            .background {background-color:rgb(241, 241, 241);}
+            a {color:rgb(0, 0, 255); text-decoration:none;}
+            .g {font-size:2em; font-family: Arial, Helvetica, sans-serif; color:rgb(156, 114, 28)}
+            .links{font-family:Arial, Helvetica, sans-serif;text-decoration: underline;}
+            .font{font-family:Arial, Helvetica, sans-serif; color:rgb(156, 114, 28)}
+            header {background-color:rgb(253, 227, 197);}
+            body {background-color:rgb(255, 245, 225)}
+        </style>
+        <header>
+            <a href = "index.html">
+                <img src="Logo.png" width = "80" height="50" alt = "Homepage" class="g"/>
+            </a>
+            <a href ="faqs.html" class="g " > &nbsp&nbsp&nbsp&nbsp FAQs </a>
+            <a href ="books.html" class="g" > &nbsp&nbsp&nbsp&nbsp Books </a>
+            <a href ="publish.html" class="g" > &nbsp&nbsp&nbsp&nbsp Publish </a>
+            <a href ="contact.html" class="g" > &nbsp&nbsp&nbsp&nbsp Contact Us </a>
+        </header>
+        <!--Heading-->
+        <h1 class="font">Contact Us</h1>
+        <!--Form-->
+        <form action="" method="get">
+            <span class="font"> First Name and Last Name: </span>
+             <br><br>
+            <textarea>Type Here ...</textarea>
+            <br>
+            <span class="font"> Email : </span>
+            <br><br>
+            <textarea >Type Here ...</textarea>
+            <br>
+            <span class="font"> Rate our website (0-100):  </span> 
+            <br> <br>
+            <input type="number" name="rate" min = "0" max = "100" step ="1"/>
+            <br>
+            <span class="font"> What genre of books are you most likely to read?  </span> 
+            <br> <br>
+            <select>
+                <option > Mystery </option>
+                <option > Fantasy </option>
+                <option > Adventure </option>
+                <option > Fairy Tale </option>
+                <option > Mythology </option>
+                <option > Drama </option>
+                <option > Romance </option>
+            </select>
+            <br>
+            <span class="font"> Which Type of Book Do You Prefer?  </span> 
+            <br> <br>
+            <input type="radio" name="type" value="Fiction" class="font"/> Fiction 
+            <br>
+            <input type="radio" name="type" value="Nonfiction" class="font" /> Nonfiction
+             <br>
+            <span class="font"> Where do you get books?  </span> 
+            <br> <br>
+            <input type="checkbox" name="type" value="$1-$20" class="font"/> Online <br>
+            <input type="checkbox" name="type" value="Nonfiction" class="font"/> Library <br>
+            <input type="checkbox" name="type" value="Nonfiction" class="font"/> Ebooks <br>
+            <input type="checkbox" name="type" value="Nonfiction" class="font"/> Bookstore <br>
+            <br>
+            <br>
+            <span class="font"> Comments: </span>
+            <br><br>
+           <textarea class="font">Type Here ...</textarea>
+           <br>
+           <br>
+           <input type="reset" name="Reset" value="Reset" />
+            <input type="submit" name="Submit Form" value="Submit Form" /> <br>
+            
+        </form>
+    </head>
