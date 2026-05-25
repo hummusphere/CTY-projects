@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Assignment 9 </title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            colors = ["red", "blue", "green", "orange","yellow","black","cyan"]
+            themes = [orange = ["rgb(255, 174, 0)", "rgb(255, 190, 48)"], red = ["rgb(255 0 0)", "rgb(255 48 48)"], blue=["rgb(0 132 255)","rgb(48 150 255)"], green = ["rgb(0 255 0)","rgb(48 255 83)"]]
+
+            var pClicked = function() {
+                document.getElementById("p").style.color = colors[Math.floor((Math.random()*6))]
+            }
+
+            var startLoop = function() {
+                setTimeout(function(){
+                var color = themes[Math.floor((Math.random()*4))]
+                document.getElementById("header").style.background =  color[0]
+                document.getElementById("nav").style.background =  color[1];
+                startLoop()
+                }, 2000);
+            }
+
+        </script>
+    </head>
+    <body onload="startLoop()">
+        <h1 id="header"> My Website</h1>
+        <nav>
+            <ul id="nav">
+                <li> Link 1 </li>
+                <li> Link 2 </li>
+                <li> Link 3 </li>
+                <li> Link 4</li>
+            </ul>
+        </nav>
+        <section>
+            <h4> Welcome </h4>
+            <p onclick="pClicked()" id = "p"> Welcome to my website. Click me! </p>
+        </section>
+    </body>
+</html>

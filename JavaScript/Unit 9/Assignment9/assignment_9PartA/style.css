@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+    margin:0px;
+    padding:20px;
+    background-color: rgb(255, 174, 0);
+    color:#fefefe;
+}
+
+body {
+    margin: 0px;
+}
+
+li {
+    display: inline;
+    padding:30px;
+}
+
+ul {
+    text-align:center;
+    padding:10px 0px;
+    margin:0px;
+    background-color: rgb(255, 190, 48);
+    color:white;
+}
+
+h4, p {
+    margin:auto;
+    width:fit-content;
+    padding:10px;
+}

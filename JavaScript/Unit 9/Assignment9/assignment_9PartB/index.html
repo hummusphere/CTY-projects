@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 9</title>
+    </head>
+    <body>
+        
+        <p id="Question"></p>
+        <select name="Options" id="selector">
+            <option value="optionOne" id="optionOne">Male</option>
+            <option value="optionTwo" id="optionTwo">Female</option>
+            <option value="optionThree" id="optionThree"style="display: none;"></option>
+            <option value="optionFour" id="optionFour" style="display: none;"></option>
+            <option value="optionFive" id="optionFive" style="display: none;"></option>
+            <input id ="input" style="display:none;">
+        </select>
+        <br>
+        <button id="Back" style="display:none">Back</button>
+        <button id="Submit" onclick="questionTwo()">Submit</button>
+        <script>
+            var question, submit, back, optionOne, optionTwo, optionThree, optionFour, optionFive;
+            var college = false
+            var areRetired = true
+
+            optionOne = document.getElementById("optionOne") 
+            optionTwo = document.getElementById("optionTwo") 
+            optionThree = document.getElementById("optionThree") 
+            optionFour = document.getElementById("optionFour") 
+            optionFive = document.getElementById("optionFive") 
+
+            question = document.getElementById("Question")
+            back = document.getElementById("Back")
+            submit = document.getElementById("Submit")
+            selector = document.getElementById("selector")
+
+            question.innerHTML = "What is your gender?"
+
+            var questionOne = function() {
+                question.innerHTML = "What is your gender?"
+                optionOne.innerHTML = "Male"
+                optionTwo.innerHTML = "Female"
+                optionThree.style.display = "none"
+                back.style.display = "none"
+                submit.setAttribute("onclick", "questionTwo()")
+                optionOne.selected = true
+            }
+
+            var questionTwo = function() {
+                question.innerHTML = "How old are you?"
+                optionOne.innerHTML = "18 or under."
+                optionTwo.innerHTML = "19-60."
+                optionThree.style.display = "block"
+                optionThree.innerHTML = "61 or older."
+                optionFour.style.display = "none"
+                optionFive.style.display = "none"
+                back.style.display = "block"
+                back.setAttribute("onclick", "questionOne()")
+                submit.setAttribute("onclick", "questionThree()")
+                optionOne.selected = true
+            }
+
+            var otherFavSubject = function() {
+                question.innerHTML = "Thank you for completing this form!"
+                selector.style.display = "none"
+                document.getElementById("input").style.display = "none"
+                submit.style.display = "none"
+                back.setAttribute("onclick", "favoriteSubject()")
+            }
+
+            var favoriteSubject = function() {
+                if (optionFive.selected == true) {
+                    submit.style.display = "block"
+                    question.innerHTML = "Please type your favorite subject."
+                    selector.style.display = "none"
+                    document.getElementById("input").style.display = "block"
+                    back.setAttribute("onclick", "underEighteen()")
+                    submit.setAttribute("onclick", "otherFavSubject()")
+
+                } else {
+                    question.innerHTML = "Thank you for completing this form!"
+                    selector.style.display = "none"
+                    submit.style.display = "none"
+                    back.setAttribute("onclick", "underEighteen()")
+                }
+            }
+
+            var underEighteen = function() {
+                document.getElementById("input").style.display = "none"
+                selector.style.display = "block"
+                submit.style.display = "block"
+                question.innerHTML = "What is your favorite school subject?"
+                optionOne.innerHTML = "Math"
+                optionTwo.innerHTML = "Science"
+                optionThree.innerHTML = "English"
+                optionFour.style.display = "block"
+                optionFour.innerHTML = "History"
+                optionFive.innerHTML = "Other"
+                optionFive.style.display = "block"
+                if (college == false) {
+                    back.setAttribute("onclick", "questionTwo()")
+                } else {
+                    back.setAttribute("onclick", "occupation()")
+                }
+                
+                submit.setAttribute("onclick", "favoriteSubject()")
+                optionOne.selected = true
+            }
+
+            var yearsWorked = function() {
+                question.innerHTML = "Thank you for completing this form!"
+                selector.style.display = "none"
+                submit.style.display = "none"
+                input.style.display = "none"
+                back.setAttribute("onclick", "employed()")
+            }
+
+            var employed = function() {
+                if (optionTwo.selected == true) {
+                    question.innerHTML = "Thank you for completing this form!"
+                    selector.style.display = "none"
+                    submit.style.display = "none"
+                    back.setAttribute("onclick", "occupation()")
+                } else if (optionOne.selected == true) {
+                    submit.style.display = "block"
+                    question.innerHTML = "How long have you worked in this field?"
+                    selector.style.display = "none"
+                    document.getElementById("input").style.display = "block"
+                    back.setAttribute("onclick", "occupation()")
+                    submit.setAttribute("onclick", "yearsWorked()")
+
+                } else {
+                    college = true;
+                    underEighteen()
+                }
+            }
+
+            var occupation = function() {
+                document.getElementById("input").style.display = "none"
+                selector.style.display = "block"
+                submit.style.display = "block"
+                question.innerHTML = "What is currently your occupation?"
+                optionOne.innerHTML = "Employed"
+                optionTwo.innerHTML = "Unemployed"
+                optionThree.innerHTML = "Student"
+                optionFour.style.display = "none"
+                optionFive.style.display = "none"
+                if (areRetired == true) {
+                    back.setAttribute("onclick", "questionTwo()")
+                } else {
+                    back.setAttribute("onclick", "retired()")
+                }
+                submit.setAttribute("onclick", "employed()")
+                optionOne.selected = true
+            }
+
+            var isRetired = function() {
+                if (optionOne.selected == true) {
+                    question.innerHTML = "Thank you for completing this form!"
+                    selector.style.display = "none"
+                    submit.style.display = "none"
+                    back.setAttribute("onclick", "retired()")
+                } else {
+                    areRetired = false;
+                    occupation()
+                }
+            }
+
+            var retired = function() {
+                selector.style.display = "block"
+                submit.style.display = "block"
+                question.innerHTML = "Are you retired?"
+                optionOne.innerHTML = "Yes"
+                optionTwo.innerHTML = "No"
+                optionThree.style.display= "none"
+                back.setAttribute("onclick", "questionTwo()")
+                submit.setAttribute("onclick", "isRetired()")
+                optionOne.selected = true
+            }
+
+            var questionThree = function() {
+                if (optionOne.selected == true) {
+                    college = false
+                    underEighteen()
+                } if (optionTwo.selected == true) {
+                    isRetired = true
+                    occupation()
+                } else {
+                    retired()
+                }
+            }
+            questionOne()
+        </script>
+    </body>
+</html>

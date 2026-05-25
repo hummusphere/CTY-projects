@@ -1,0 +1,146 @@
+<html>
+<style>
+body{
+	text-align: center;
+	width: 940px;
+	margin:auto;
+}
+h1
+{
+	font-size:3em;
+}
+body
+{
+	background-color:#DDF;
+}
+li {
+	list-style: none;
+	width:fit-content;
+	text-align: center;
+	margin: 0px;
+	display:inline;
+}
+
+</style>
+<script>
+	var animalList = [];
+	class Animal 
+	{
+		constructor()
+		{
+			this.name = prompt("What is the name of this animal?");
+			this.age = prompt("What is the age of this animal?");
+		}
+	}
+	class Mammal extends Animal
+	{
+		constructor()
+		{
+			super();
+			this.fur = prompt("How long is the fur on this mammal?");
+		}
+	}
+	class Reptile extends Animal
+	{
+		constructor()
+		{
+			super();
+			this.scales = prompt("What color are the scales on this reptile?");
+		}
+	
+	}
+
+
+	window.onload = function(){
+		animalList = []
+		list = document.getElementById("animalList")
+		listChildren = list.children
+		selection = document.getElementById("selection")
+		animals = selection.children
+
+		var deleteAnimal = function(buttonName) {
+			a = 0
+			for (var i = 0; i < animalList.length; i++) {
+				if ("Delete " + animalList[i].name == buttonName.value) {
+					a = i; 
+					break
+				}
+			}
+			console.log()
+			animalList.splice(a,1)
+			for (var i = 0; i < 3; i++) {
+				list.children[a*3].remove()
+			}
+		}
+
+		var displayInformation = function(elementName) {
+			a = 0
+			for (var i = 0; i < animalList.length; i++) {
+				if (animalList[i].name == elementName.innerHTML) {
+					a = i; 
+					break
+				}
+			}
+			if (animalList[i].constructor.name == "Mammal") {
+				alert("Animal Name : " + animalList[a].name + "\n Animal Type : Mammal \n Animal Age : " + animalList[a].age + "\n Animal Fur : " + animalList[a].fur)
+			} else {
+				alert("Animal Name : " + animalList[a].name + "\n Animal Type : Mammal \n Animal Age : " + animalList[a].age + "\n Animal Scales : " + animalList[a].scales)
+			}
+		}
+
+		var addButtonVar  = document.getElementById("addButton");
+		addButtonVar.onclick = function(){
+			if (animals[0].selected == true || animals[1].selected == true || animals[2].selected == true) {
+				newAnimal = new Mammal()
+			} else {
+				newAnimal = new Reptile()
+			}
+
+			animalList.push(newAnimal)
+			listItem = document.createElement("li")
+			listItem.innerHTML = newAnimal.name
+			list.appendChild(listItem)
+			listItem.onclick = function() {
+				displayInformation(event.target)
+			}
+			delButton = document.createElement("input")
+			delButton.type = "button"
+			delButton.value = "Delete " + newAnimal.name
+			delButton.id = "delButton"
+			delButton.onclick = function() {
+				deleteAnimal(event.target)
+			}
+			list.appendChild(delButton)
+
+			br = document.createElement("br")
+			list.appendChild(br)
+		}	
+
+
+	}
+	
+</script>
+<body>
+	<h1>My Zoo</h1>
+	<form>
+		<select id="selection">
+			<option> Tiger </option>
+			<option> Baboon </option>		
+			<option> Elephant </option>		
+			<option> Turtle </option>		
+			<option> Iguana </option>		
+			<option> Snake </option>		
+			<!-- You can add or change the animal species listed here -->
+		</select>
+		<input type="button" value="Add Animal" id="addButton" /> 
+		<br/>
+	</form>
+	<div>
+		<h2> Animals in my Zoo: </h2>
+		<ul id = "animalList">
+		</ul>
+</body>
+
+
+</figure>
+</html>

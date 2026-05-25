@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Assignment 11B</title>
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		
+   <script>
+   $(function(){
+       $("#output").hide();
+   });
+
+   function calculatePayment()
+   {
+		var amount = $("#amount").val();
+		var interestRate = $("#rate").val();
+		var rate = interestRate/(100*12);
+		var years = $("#year").val();
+		var months = years * 12;
+      
+		//Interest Formula
+		var D = (((1+rate)**months - 1)/(rate * (1 + rate) ** months ));
+		var payment = amount / D
+      
+      
+		$("#output").html(payment)
+      $("#output").show()
+    }
+
+
+   </script>
+</head>
+<body>
+<h1> Payment Calculator </h1>
+<p>
+Loan Amount: 
+<input type="text" id="amount" /><br />
+Interest Rate: 
+<input type="text" id="rate" /><br />
+Number of Years: 
+<input type="text" id="year" /><br />
+<button id="calculateButton" onclick="calculatePayment()" />Calculate Monthly Payment</button><br />
+<p id="output">
+</p>
+
+</body>
+</html>

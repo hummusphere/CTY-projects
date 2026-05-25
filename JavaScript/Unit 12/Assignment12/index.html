@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Assignment 12 </title>
+        <script src="jquery-3.7.0.min.js"></script>
+        <script>
+            $(function(){
+                $(document).keypress(function(event) {
+                    var key = String.fromCharCode(event.which);
+                    var posY = parseInt(($("#box").css("top")).replace('px', ''))
+                    var posX = parseInt(($("#box").css("left")).replace('px', ''))
+                    if (key == "w" || key =="W") {
+                        $("#box").css("top", String(posY - 5) + "px")
+                    } else if (key == "s" || key =="S") {
+                        $("#box").css("top", String(posY + 5) + "px") 
+                    } else if (key == "a" || key =="A") {
+                        $("#box").css("left", String(posX - 5) + "px")
+                    } else if (key == "d" || key =="D") {
+                        $("#box").css("left", String(posX + 5) + "px") 
+                    }
+                })
+            })
+        </script>
+        <style>
+            #box {
+                background-color: red;
+                width:50px;
+                height:50px;
+                position:absolute;
+                top:0px;
+                left:0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+</html>

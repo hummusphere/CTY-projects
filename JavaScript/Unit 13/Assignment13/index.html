@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> World Flag Quiz </title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script src="jquery-3.7.0.min.js"></script>
+        <script src="scripts.js"></script>
+    </head>
+    <body onload="startLoop()">
+        <h1 id="header"> World Flag Quiz</h1>
+        <nav>
+            <ul id="nav">
+                <li> <a href="index.html">Quiz</a> </li>
+                <li> <a href="answers.html">Answers</a> </li>
+                <li> <a href="showroom.html">Showroom</a> </li>
+            </ul>
+        </nav>
+        <section>
+            <h4 id = "h4"> Welcome to the World Flag Quiz</h4>
+            <img id="mainImg" style="display:none;" src=""></img>
+            <button id="quiz" onclick="startQuiz()"> Click to Start Quiz</button>
+            <input id="input" style="display:none;"></input>
+            <button id = "submit" style="display:none;"> Submit</button>
+        </section>
+    </body>
+</html>
