@@ -1,0 +1,111 @@
+/*Header Style*/
+header {
+    width:100%; 
+    height:4em; 
+    background-color:rgb(23, 0, 75); 
+    margin:0em;padding:0em; 
+    position: fixed; 
+    box-shadow: rgb(128, 128, 128) 2px 2px 5px;
+    z-index: 100;
+}
+
+/*Body Style*/
+body {
+    padding: 0px;
+    margin: 0px; 
+    background-color: rgb(240, 240, 240); 
+    margin-block-end: 0em; 
+    margin-block-start: 0em;
+    }
+
+/*font*/
+.font {
+    font-family:Arial, Helvetica, sans-serif; 
+    color:rgb(60, 10, 118)
+}
+
+/*Navagation links position*/
+.join {
+    right:0em;
+    padding-right:1em;
+    padding-left:1em;
+}
+
+.review {
+    right:3.8em; 
+    padding-right:0.5em;
+    padding-left:0.5em;
+}
+.showcase {
+    right:8.6em; 
+    padding-right:0.3em;
+    padding-left:0.3em;
+}
+
+.headingStyle img {display: inline-block; 
+    width:3em; 
+    height:3em; 
+    padding-top:0.35em; 
+    padding-bottom:0.35em; 
+    padding-left:0.5em; 
+    padding-right:0.5em;
+}
+
+/*Navagation links styling*/
+.headingStyle li {
+    display: inline-block; 
+    list-style-type: none;
+}
+
+.headingStyle a {
+    color:white; 
+    text-decoration: none;
+}
+
+.headingStyle ul {
+    height: 0em; 
+    width:0em; margin:0em; 
+    padding-inline-start: 0px;
+}
+
+.logoLink {
+    padding-top:3em;
+}
+
+.headingStyle a:hover{
+    background-color:rgb(40, 26, 73);
+     border-bottom: 0.15em white solid;
+}
+
+.headingText {
+    position:absolute; 
+    top:0px;padding-top:1.36em; 
+    padding-bottom: 1.36em;
+}
+
+/*article style*/
+.articleStyle h1 {
+    padding:0.5em;
+    padding-left:0.5em; 
+    padding-bottom:0em; 
+    padding-top:2.5em;
+    font-size:2em; 
+    margin:0em; 
+}
+
+.articleStyle p,h2, h3{
+    font-size:1em; 
+    padding-left:1em; 
+    padding-right:1em; 
+    margin:0em;
+    padding-bottom:1em;
+}
+
+/*footer*/
+footer {
+    width:100%;
+    height: 2.5em; 
+    font-size: 1em;
+    background-color: rgb(197, 182, 252); 
+    text-align: center;
+}

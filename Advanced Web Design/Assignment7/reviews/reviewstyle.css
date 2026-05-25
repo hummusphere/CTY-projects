@@ -1,0 +1,62 @@
+/*review article*/
+.articleStyle details {
+    padding-left:1em; 
+    font-size:1em;
+}
+
+figure {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+/*images and figcaptions*/ 
+.images {
+    margin-block-start: 0px;
+    padding:1%;
+    padding-bottom: 1em;
+    width:35em;
+    height:20em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.figpadding figcaption{
+    font-size : 0.9em; 
+    padding-left:35px; 
+    padding-right:35px; 
+    margin:auto;
+    line-height: 35px;
+    max-width:38.75em;
+}
+
+.pageHeading {    
+    padding:0.5em;
+    padding-left:0.5em; 
+    padding-bottom:0em; 
+    padding-top:2.5em;
+    font-size:2em; 
+    margin:0em; 
+    text-shadow: rgb(150, 150, 150) 0px 1px 0px;
+}
+
+.openingParagraph {
+    margin:auto;
+    max-width: 37em;
+}
+.imageHeading {
+    font-size:1.8em;  
+    margin:auto; 
+    padding:0em;
+    max-width:19em;
+    padding-left:35px; 
+    padding-right:35px; 
+}
+
+@media screen and (max-width:800px) {
+    .images {
+        width:87.5vw;
+        height:50vw;
+    }
+}

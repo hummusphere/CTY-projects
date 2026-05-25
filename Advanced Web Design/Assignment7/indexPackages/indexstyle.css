@@ -1,0 +1,56 @@
+.articleOne p {
+    padding-top:2%;
+    padding-bottom:1%;
+}
+
+.articleOne figcaption {
+    margin-top:10%; 
+    animation: textScale 3s infinite;
+}
+.articleOne {
+    text-align: center; 
+    background-color: white; 
+    width:96%; 
+    margin-left:2%; 
+    margin-right:0%; 
+    padding:0%; 
+    box-shadow: rgb(207, 207, 207) 0px 2px 0px 0px;
+}
+
+.articleOne img {
+    border:3px solid rgb(216, 216, 216);
+    border-radius: 15px; 
+    background-color:rgb(238, 238, 238); 
+    transform: rotate(0deg); 
+    transition: transform 0.5s;
+}
+
+.articleOne figure {
+    display:inline-block;
+    margin:0%;
+    margin-left:0.5%; 
+    margin-right:0.5%; 
+    margin-bottom:1%; 
+    opacity: 100%;
+}
+
+.articleOne img:hover{
+    transform: rotate(5deg); 
+    opacity: 75%
+}
+
+@keyframes textScale {
+    0% {transform: scale(1);} 
+    50% {transform:scale(1.1);} 
+    100% {transform: scale(1);}
+}
+
+.pageHeading {    
+    padding:0.5em;
+    padding-left:0.5em; 
+    padding-bottom:0em; 
+    padding-top:2.5em;
+    font-size:2em; 
+    margin:0em; 
+    text-shadow: rgb(150, 150, 150) 0px 1px 0px;
+}
