@@ -1,0 +1,54 @@
+/*review article*/
+.articleStyle details {
+    padding-left:1em; 
+    font-size:1em;
+}
+
+/*images and figcaptions*/ 
+.images {
+    margin-block-start: 0px;
+    padding:1%;
+    padding-left:0.5em; 
+    padding-right:1em; 
+    width: 8em;
+    height:8em;
+    float:left;
+}
+
+figure {
+    margin-top:0%; 
+    margin-left:1%; 
+    background-color: rgb(255, 255, 255); 
+    box-shadow: rgb(207, 207, 207) 0px 2px 0px 0px;
+}
+
+figcaption {
+    font-size : 1.2em; 
+    padding-left:2%; 
+    padding-top:2%;
+}
+
+.figpadding figcaption{
+    padding-bottom:1%;
+    padding-top:1%;
+    line-height: 35px;
+}
+
+/*footer*/
+footer {
+    width:100%;
+     height: 2.5em; 
+     font-size: 1em;
+     background-color: rgb(197, 182, 252); 
+     text-align: center;
+}
+
+.pageHeading {    
+    padding:0.5em;
+    padding-left:0.5em; 
+    padding-bottom:0em; 
+    padding-top:2.5em;
+    font-size:2em; 
+    margin:0em; 
+    text-shadow: rgb(150, 150, 150) 0px 1px 0px;
+}
